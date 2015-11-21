@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05BF08461C00428B00D5880B /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05C769901C003A890037988C /* FacebookSDK.framework */; };
+		05BF08491C00430E00D5880B /* Loading.png in Resources */ = {isa = PBXBuildFile; fileRef = 05BF08471C00430E00D5880B /* Loading.png */; };
+		05BF084A1C00430E00D5880B /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 05BF08481C00430E00D5880B /* Logo.png */; };
+		05BF08501C0048BF00D5880B /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BF084F1C0048BF00D5880B /* ProfileViewController.m */; };
+		05BF08531C004D6500D5880B /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BF08521C004D6500D5880B /* Model.m */; };
 		05C769561BFFE8920037988C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C769551BFFE8920037988C /* main.m */; };
 		05C769591BFFE8920037988C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C769581BFFE8920037988C /* AppDelegate.m */; };
 		05C7695C1BFFE8920037988C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05C7695B1BFFE8920037988C /* ViewController.m */; };
@@ -27,6 +32,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05BF08471C00430E00D5880B /* Loading.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Loading.png; sourceTree = "<group>"; };
+		05BF08481C00430E00D5880B /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
+		05BF084E1C0048BF00D5880B /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		05BF084F1C0048BF00D5880B /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		05BF08511C004D6500D5880B /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		05BF08521C004D6500D5880B /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
 		05C769501BFFE8920037988C /* Looking for Group.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Looking for Group.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		05C769541BFFE8920037988C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05C769551BFFE8920037988C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +51,7 @@
 		05C769691BFFE8920037988C /* Looking for GroupTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Looking for GroupTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		05C7696E1BFFE8920037988C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05C7696F1BFFE8920037988C /* Looking_for_GroupTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Looking_for_GroupTests.m; sourceTree = "<group>"; };
+		05C769901C003A890037988C /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05BF08461C00428B00D5880B /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 		05C769471BFFE8920037988C = {
 			isa = PBXGroup;
 			children = (
+				05C769901C003A890037988C /* FacebookSDK.framework */,
 				05C769521BFFE8920037988C /* Looking for Group */,
 				05C7696C1BFFE8920037988C /* Looking for GroupTests */,
 				05C769511BFFE8920037988C /* Products */,
@@ -85,10 +99,14 @@
 				05C769581BFFE8920037988C /* AppDelegate.m */,
 				05C7695A1BFFE8920037988C /* ViewController.h */,
 				05C7695B1BFFE8920037988C /* ViewController.m */,
+				05BF084E1C0048BF00D5880B /* ProfileViewController.h */,
+				05BF084F1C0048BF00D5880B /* ProfileViewController.m */,
 				05C7695D1BFFE8920037988C /* Main.storyboard */,
 				05C769601BFFE8920037988C /* Images.xcassets */,
 				05C769621BFFE8920037988C /* LaunchScreen.xib */,
 				05C769531BFFE8920037988C /* Supporting Files */,
+				05BF08511C004D6500D5880B /* Model.h */,
+				05BF08521C004D6500D5880B /* Model.m */,
 			);
 			path = "Looking for Group";
 			sourceTree = "<group>";
@@ -96,6 +114,8 @@
 		05C769531BFFE8920037988C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				05BF08471C00430E00D5880B /* Loading.png */,
+				05BF08481C00430E00D5880B /* Logo.png */,
 				05C769541BFFE8920037988C /* Info.plist */,
 				05C769551BFFE8920037988C /* main.m */,
 			);
@@ -199,7 +219,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05BF08491C00430E00D5880B /* Loading.png in Resources */,
 				05C7695F1BFFE8920037988C /* Main.storyboard in Resources */,
+				05BF084A1C00430E00D5880B /* Logo.png in Resources */,
 				05C769641BFFE8920037988C /* LaunchScreen.xib in Resources */,
 				05C769611BFFE8920037988C /* Images.xcassets in Resources */,
 			);
@@ -221,7 +243,9 @@
 			files = (
 				05C7695C1BFFE8920037988C /* ViewController.m in Sources */,
 				05C769591BFFE8920037988C /* AppDelegate.m in Sources */,
+				05BF08501C0048BF00D5880B /* ProfileViewController.m in Sources */,
 				05C769561BFFE8920037988C /* main.m in Sources */,
+				05BF08531C004D6500D5880B /* Model.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +373,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Lucky/Desktop,
+					"/Users/Lucky/Downloads/FacebookSDKs-iOS-20151111",
+					"(1)",
+					/Users/Lucky/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = "Looking for Group/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -359,6 +390,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Lucky/Desktop,
+					"/Users/Lucky/Downloads/FacebookSDKs-iOS-20151111",
+					"(1)",
+					/Users/Lucky/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = "Looking for Group/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -418,6 +456,7 @@
 				05C769751BFFE8920037988C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		05C769761BFFE8920037988C /* Build configuration list for PBXNativeTarget "Looking for GroupTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +465,7 @@
 				05C769781BFFE8920037988C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
