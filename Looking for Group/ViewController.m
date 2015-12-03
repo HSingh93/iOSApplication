@@ -55,7 +55,6 @@
                 PFObject *userObj = [PFObject objectWithClassName:@"UserObj"];
                 userObj[@"username"] = user.name;
                 userObj[@"userField"] = user.id;
-                userObj[@"userImage"] = @"Logo.png";
                 [userObj saveInBackground];
             }
             
@@ -126,7 +125,7 @@
 
 -(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if([segue.identifier isEqualToString:@"profile"])
+    if([segue.identifier isEqualToString:@"goToProfile"])
     {
         ProfileViewController * viewController = [segue destinationViewController];
         viewController.userID = self.userID;

@@ -11,7 +11,7 @@
 #import <parse/Parse.h>
 #import "Model.h"
 
-@interface ProfileViewController : UIViewController
+@interface ProfileViewController : UIViewController <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *profileImage;
 
@@ -20,5 +20,10 @@
 @property (strong, nonatomic) Model *model;
 
 @property (weak, nonatomic) NSString *userID;
+
+@property (weak, nonatomic) IBOutlet UITextField *description;
+
+@property (weak, nonatomic) IBOutlet UIButton *saveText;
+
 
 @end
