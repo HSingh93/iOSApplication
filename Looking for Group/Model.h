@@ -7,9 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <FacebookSDK/FacebookSDK.h>
 
 @interface Model : NSObject
 
 @property (nonatomic) NSInteger loggedIn;
+
 
 @end

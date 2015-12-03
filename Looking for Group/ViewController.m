@@ -7,8 +7,8 @@
 //
 
 #import "ViewController.h"
-#import "ProfileViewController.h"
 #import "Model.h"
+#import "ProfileViewController.h"
 
 @interface ViewController ()
 
@@ -17,7 +17,12 @@
 @implementation ViewController
 
 @synthesize model;
-@synthesize profileVC;
+@synthesize findGroupButton;
+@synthesize createGroupButton;
+@synthesize myGroupButton;
+@synthesize viewProfileButton;
+@synthesize userID;
+@synthesize exists;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -26,13 +31,8 @@
         model = [[Model alloc] init];
         model.loggedIn = 0;
     }
-    
-    if(profileVC == nil) {
-        profileVC = (ProfileViewController *) [self.storyboard instantiateViewControllerWithIdentifier:@"profileViewController"];
-        profileVC.model = model;
-    }
-    
     self.FBLogin.readPermissions = @[@"public_profile", @"email", @"user_friends"];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,20 +42,55 @@
 
 -(void) loginViewFetchedUserInfo:(FBLoginView *)loginView user:(id<FBGraphUser>)user {
     NSLog(@"%@", user.name);
+    userID = user.id;
+    PFQuery *query = [PFQuery queryWithClassName:@"UserObj"];
+    [query whereKey:@"userField" equalTo:user.id];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            // The find succeeded.
+            NSLog(@"Successfully retrieved %d scores.", objects.count);
+            // Do something with the found objects
+            if(objects.count < 1) {
+                NSLog(@"Putting into DB");
+                PFObject *userObj = [PFObject objectWithClassName:@"UserObj"];
+                userObj[@"username"] = user.name;
+                userObj[@"userField"] = user.id;
+                userObj[@"userImage"] = @"Logo.png";
+                [userObj saveInBackground];
+            }
+            
+        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
+    
+    
+
     
 }
      
 -(void) loginViewShowingLoggedInUser:(FBLoginView *)loginView {
     model.loggedIn = 1;
-    profileVC.model.loggedIn = 1;
     NSLog(@"You have logged in! %d", model.loggedIn);
     //Change to profile view
-    [self presentViewController:profileVC animated:YES completion:nil];
+    //[self presentViewController:profileVC animated:YES completion:nil];
+    
+    findGroupButton.hidden = NO;
+    createGroupButton.hidden = NO;
+    myGroupButton.hidden = NO;
+    viewProfileButton.hidden = NO;
+    
     
 }
 
 -(void) loginViewShowingLoggedOutUser:(FBLoginView *)loginView {
     NSLog(@"You have logged out! %d", model.loggedIn);
+    
+    findGroupButton.hidden = YES;
+    createGroupButton.hidden = YES;
+    myGroupButton.hidden = YES;
+    viewProfileButton.hidden = YES;
     
 }
 
@@ -86,6 +121,20 @@
     if(alertMSG) {
         [[[UIAlertView alloc] initWithTitle:alertTitle message:alertMSG delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
     }
+    
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"profile"])
+    {
+        ProfileViewController * viewController = [segue destinationViewController];
+        viewController.userID = self.userID;
+    }
+    
+}
+
+- (IBAction)viewProfile:(id)sender {
     
 }
 

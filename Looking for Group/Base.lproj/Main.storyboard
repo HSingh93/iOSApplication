@@ -32,47 +32,123 @@
                                 <rect key="frame" x="0.0" y="44" width="320" height="524"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="arO-Jj-DGS">
+                                <rect key="frame" x="120" y="90" width="81" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="View Profile"/>
+                                <connections>
+                                    <action selector="viewProfile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qsw-Mz-MtC"/>
+                                    <segue destination="SN7-nk-kwJ" kind="modal" identifier="profile" id="9jA-fE-md3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fEl-EO-z5N">
+                                <rect key="frame" x="114" y="166" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Create Group"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lWN-5b-oIL">
+                                <rect key="frame" x="117" y="225" width="84" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Find Groups">
+                                    <color key="titleShadowColor" red="0.094913983585858563" green="0.094913983585858563" blue="0.094913983585858563" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="l2Y-5Z-trN">
+                                <rect key="frame" x="123" y="128" width="75" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="My Groups"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.72575207590812574" blue="0.76993844634470099" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="FBLogin" destination="NV1-hi-iLh" id="OLq-ii-wdi"/>
+                        <outlet property="createGroupButton" destination="fEl-EO-z5N" id="Lj1-Qg-UMb"/>
+                        <outlet property="findGroupButton" destination="lWN-5b-oIL" id="vIe-G4-rWg"/>
+                        <outlet property="myGroupButton" destination="l2Y-5Z-trN" id="uYC-hQ-p3m"/>
+                        <outlet property="viewProfileButton" destination="arO-Jj-DGS" id="DqH-aK-A5U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="202" y="319"/>
         </scene>
-        <!--Profile View Controller-->
-        <scene sceneID="5Ms-OO-HUB">
+        <!--View Controller-->
+        <scene sceneID="GN9-61-Amv">
             <objects>
-                <viewController storyboardIdentifier="profileViewController" id="tQL-Uq-s8I" customClass="ProfileViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="D28-Nd-hj8">
+                <viewController id="HS5-Sx-owC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3Du-KW-KZN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r4g-tL-y1X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="662" y="411"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="1gI-6D-mvL">
+            <objects>
+                <viewController id="Ka5-Zd-Mjr" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3ud-IA-uhG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yia-kB-241" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="206" y="1019"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hEm-BZ-iie">
+            <objects>
+                <viewController id="tEa-wN-BOY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L5j-Pi-InU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KAE-aR-AKV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="654" y="1079"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="Bji-KQ-7lY">
+            <objects>
+                <viewController id="SN7-nk-kwJ" customClass="ProfileViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ooa-4W-EXG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profile View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="00n-M9-63v">
-                                <rect key="frame" x="115" y="36" width="91" height="21"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="vf6-Wj-AGa">
+                                <rect key="frame" x="40" y="30" width="240" height="231"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NAme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZjC-Du-eMI">
+                                <rect key="frame" x="40" y="297" width="240" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" id="SGY-RV-4M1" customClass="FBLoginView">
-                                <rect key="frame" x="40" y="107" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="Logout" destination="SGY-RV-4M1" id="o54-OJ-Yqm"/>
+                        <outlet property="profileImage" destination="vf6-Wj-AGa" id="RCW-91-RHb"/>
+                        <outlet property="userName" destination="ZjC-Du-eMI" id="hSL-sP-EfN"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uhd-LM-w36" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SYp-Ev-q35" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="551" y="319"/>
+            <point key="canvasLocation" x="671" y="-240"/>
         </scene>
     </scenes>
     <resources>

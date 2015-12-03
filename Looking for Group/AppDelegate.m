@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import <FacebookSDK/FacebookSDK.h>
+#import <Parse/Parse.h>
+
 
 @interface AppDelegate ()
 
@@ -19,6 +21,15 @@
     // Override point for customization after application launch.
     
     [FBLoginView class];
+    
+    [Parse enableLocalDatastore];
+    
+    // Initialize Parse.
+    [Parse setApplicationId:@"ORE1nwC0yl2tyV3BHMagNdpkaWZdKIQd23Q8jnhh"
+                  clientKey:@"sW2GURMsEJxGw1xehyusJqHRniAQAPoW40IgpZBA"];
+    
+    // [Optional] Track statistics around application opens.
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     return YES;
 }
 
