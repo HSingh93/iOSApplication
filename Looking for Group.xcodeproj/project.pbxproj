@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0520880A1C125D4D0039DF1A /* MyGroupsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 052088091C125D4D0039DF1A /* MyGroupsViewController.m */; };
 		05B766361C0FA1D300178C55 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05B766351C0FA1D300178C55 /* ProfileViewController.m */; };
 		05B766381C0FA45F00178C55 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05B766371C0FA45F00178C55 /* Bolts.framework */; };
 		05B7663A1C0FA46800178C55 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05B766391C0FA46800178C55 /* Parse.framework */; };
@@ -44,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		052088081C125D4D0039DF1A /* MyGroupsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyGroupsViewController.h; sourceTree = "<group>"; };
+		052088091C125D4D0039DF1A /* MyGroupsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyGroupsViewController.m; sourceTree = "<group>"; };
 		05B766341C0FA1D300178C55 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		05B766351C0FA1D300178C55 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		05B766371C0FA45F00178C55 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -150,6 +153,8 @@
 				05C7695A1BFFE8920037988C /* ViewController.h */,
 				05C7695B1BFFE8920037988C /* ViewController.m */,
 				05C7695D1BFFE8920037988C /* Main.storyboard */,
+				052088081C125D4D0039DF1A /* MyGroupsViewController.h */,
+				052088091C125D4D0039DF1A /* MyGroupsViewController.m */,
 				05B766341C0FA1D300178C55 /* ProfileViewController.h */,
 				05B766351C0FA1D300178C55 /* ProfileViewController.m */,
 				05C769601BFFE8920037988C /* Images.xcassets */,
@@ -291,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0520880A1C125D4D0039DF1A /* MyGroupsViewController.m in Sources */,
 				05C7695C1BFFE8920037988C /* ViewController.m in Sources */,
 				05C769591BFFE8920037988C /* AppDelegate.m in Sources */,
 				05C769561BFFE8920037988C /* main.m in Sources */,

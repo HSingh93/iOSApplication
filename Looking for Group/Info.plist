@@ -14,14 +14,16 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb168589453492077</string>
+				<string>fb1528323494155391</string>
 			</array>
 			<key>CFBundleURLName</key>
 			<string></string>
 		</dict>
 	</array>
 	<key>FacebookAppID</key>
-	<string>168589453492077</string>
+	<string>1528323494155391</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>

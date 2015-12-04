@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "Model.h"
 #import "ProfileViewController.h"
+#import "MyGroupsViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface ViewController ()
 
@@ -33,6 +35,13 @@
     }
     self.FBLogin.readPermissions = @[@"public_profile", @"email", @"user_friends"];
     
+    //Set background image
+    UIGraphicsBeginImageContext(self.view.frame.size);
+    [[UIImage imageNamed:@"Loading.png"] drawInRect:self.view.bounds];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:image];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -73,13 +82,30 @@
     model.loggedIn = 1;
     NSLog(@"You have logged in! %d", model.loggedIn);
     //Change to profile view
-    //[self presentViewController:profileVC animated:YES completion:nil];
     
     findGroupButton.hidden = NO;
-    createGroupButton.hidden = NO;
-    myGroupButton.hidden = NO;
-    viewProfileButton.hidden = NO;
+    findGroupButton.layer.cornerRadius = 10;
+    findGroupButton.clipsToBounds = YES;
+    [[findGroupButton layer] setBorderWidth:2.0f];
+    [[findGroupButton layer] setBorderColor:[UIColor blackColor].CGColor];
     
+    createGroupButton.hidden = NO;
+    createGroupButton.layer.cornerRadius = 10; // this value vary as per your desire
+    createGroupButton.clipsToBounds = YES;
+    [[createGroupButton layer] setBorderWidth:2.0f];
+    [[createGroupButton layer] setBorderColor:[UIColor blackColor].CGColor];
+    
+    myGroupButton.hidden = NO;
+    myGroupButton.layer.cornerRadius = 10; // this value vary as per your desire
+    myGroupButton.clipsToBounds = YES;
+    [[myGroupButton layer] setBorderWidth:2.0f];
+    [[myGroupButton layer] setBorderColor:[UIColor blackColor].CGColor];
+    
+    viewProfileButton.hidden = NO;
+    viewProfileButton.layer.cornerRadius = 10; // this value vary as per your desire
+    viewProfileButton.clipsToBounds = YES;
+    [[viewProfileButton layer] setBorderWidth:2.0f];
+    [[viewProfileButton layer] setBorderColor:[UIColor blackColor].CGColor];
     
 }
 
@@ -128,6 +154,11 @@
     if([segue.identifier isEqualToString:@"goToProfile"])
     {
         ProfileViewController * viewController = [segue destinationViewController];
+        viewController.userID = self.userID;
+    }
+    if([segue.identifier isEqualToString:@"myGroups"])
+    {
+        MyGroupsViewController * viewController = [segue destinationViewController];
         viewController.userID = self.userID;
     }
     

@@ -20,6 +20,7 @@
 @synthesize model;
 @synthesize userID;
 @synthesize saveText;
+@synthesize returnButton;
 @synthesize description;
 
 - (void)viewDidLoad {
@@ -52,7 +53,9 @@
                     //[self.profilePicture addSubview:picture];
                     
                     [profileImage setContentMode:UIViewContentModeScaleAspectFit];
-                    [profileImage setImage:image];
+                    
+                    //-----UNCOMMENT THIS LINE TO USE FACEBOOK PROFILE PICTURE------
+                    //[profileImage setImage:image];
                     
                     NSLog(@"%@", UserObj[@"username"]);
                     
@@ -66,6 +69,19 @@
         }
     }];
     
+    //-----COMMENT THESE LINES IF YOU WANT TO USE THE FACEBOOK PROFILE PICTURE-----
+    UIImage *image = [UIImage imageNamed:@"Logo.png"];
+    [profileImage setImage:image];
+    
+    returnButton.layer.cornerRadius = 10;
+    returnButton.clipsToBounds = YES;
+    [[returnButton layer] setBorderWidth:2.0f];
+    [[returnButton layer] setBorderColor:[UIColor blackColor].CGColor];
+    
+    saveText.layer.cornerRadius = 10;
+    saveText.clipsToBounds = YES;
+    [[saveText layer] setBorderWidth:2.0f];
+    [[saveText layer] setBorderColor:[UIColor blackColor].CGColor];
     
     //Get user description
     PFQuery *queryDescription = [PFQuery queryWithClassName:@"UserDescription"];

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <FacebookSDK/FacebookSDK.h>
 #import "ProfileViewController.h"
+#import "MyGroupsViewController.h"
 #import <parse/Parse.h>
 
 @class Model;
@@ -16,7 +17,6 @@
 @interface ViewController : UIViewController <FBLoginViewDelegate>
 
 @property (weak, nonatomic) IBOutlet FBLoginView * FBLogin;
-
 @property (strong, nonatomic) Model *model;
 
 @property (weak, nonatomic) IBOutlet UIButton *findGroupButton;

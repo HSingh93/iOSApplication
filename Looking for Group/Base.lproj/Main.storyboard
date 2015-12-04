@@ -21,46 +21,52 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" id="NV1-hi-iLh" customClass="FBLoginView">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="51"/>
+                                <rect key="frame" x="0.0" y="309" width="320" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="d89-0z-OUd"/>
                                 </connections>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Loading.png" id="b1U-OW-aEm">
-                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="arO-Jj-DGS">
-                                <rect key="frame" x="120" y="90" width="81" height="30"/>
+                                <rect key="frame" x="20" y="20" width="119" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="View Profile"/>
+                                <state key="normal" title="View Profile">
+                                    <color key="titleColor" red="0.094913983590000001" green="0.094913983590000001" blue="0.094913983590000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="viewProfile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qsw-Mz-MtC"/>
                                     <segue destination="SN7-nk-kwJ" kind="modal" identifier="goToProfile" id="9jA-fE-md3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fEl-EO-z5N">
-                                <rect key="frame" x="114" y="166" width="92" height="30"/>
+                                <rect key="frame" x="181" y="67" width="119" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Create Group"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lWN-5b-oIL">
-                                <rect key="frame" x="117" y="225" width="84" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Find Groups">
-                                    <color key="titleShadowColor" red="0.094913983585858563" green="0.094913983585858563" blue="0.094913983585858563" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Create Group">
+                                    <color key="titleColor" red="0.094913983590000001" green="0.094913983590000001" blue="0.094913983590000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="l2Y-5Z-trN">
-                                <rect key="frame" x="123" y="128" width="75" height="30"/>
+                                <rect key="frame" x="181" y="20" width="119" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="My Groups"/>
+                                <state key="normal" title="My Groups">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="HS5-Sx-owC" kind="modal" identifier="myGroups" id="0Y5-Ik-lIa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lWN-5b-oIL">
+                                <rect key="frame" x="20" y="67" width="119" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Find Groups">
+                                    <color key="titleColor" red="0.094913983590000001" green="0.094913983590000001" blue="0.094913983590000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.094913983585858563" green="0.094913983585858563" blue="0.094913983585858563" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.72575207590812574" blue="0.76993844634470099" alpha="1" colorSpace="calibratedRGB"/>
@@ -77,15 +83,38 @@
             </objects>
             <point key="canvasLocation" x="202" y="319"/>
         </scene>
-        <!--View Controller-->
+        <!--My Groups View Controller-->
         <scene sceneID="GN9-61-Amv">
             <objects>
-                <viewController id="HS5-Sx-owC" sceneMemberID="viewController">
+                <viewController id="HS5-Sx-owC" customClass="MyGroupsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Du-KW-KZN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zfg-NP-svJ">
+                                <rect key="frame" x="113" y="518" width="95" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Return">
+                                    <color key="titleColor" red="0.094913983590000001" green="0.094913983590000001" blue="0.094913983590000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="modal" identifier="returnMyGroup" id="9nb-56-lmK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Groups" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Iey-x5-6RM">
+                                <rect key="frame" x="41" y="20" width="239" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="returnButton" destination="zfg-NP-svJ" id="Xhv-34-XO3"/>
+                        <outlet property="titleText" destination="Iey-x5-6RM" id="Z0l-kd-8Fb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r4g-tL-y1X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -139,7 +168,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jlD-hc-QzF">
-                                <rect key="frame" x="137" y="518" width="46" height="30"/>
+                                <rect key="frame" x="92" y="518" width="136" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Return">
@@ -160,7 +189,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Wsq-vR-fMv">
-                                <rect key="frame" x="143" y="473" width="34" height="30"/>
+                                <rect key="frame" x="92" y="471" width="136" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Save">
@@ -171,11 +200,12 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.58359350435333868" green="1" blue="0.99956808271753217" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="description" destination="Cmp-ZU-p3x" id="fq6-eG-3fV"/>
                         <outlet property="profileImage" destination="vf6-Wj-AGa" id="RCW-91-RHb"/>
+                        <outlet property="returnButton" destination="jlD-hc-QzF" id="LKW-Wk-Wpi"/>
                         <outlet property="saveText" destination="Wsq-vR-fMv" id="Wxy-rG-dxC"/>
                         <outlet property="userName" destination="ZjC-Du-eMI" id="hSL-sP-EfN"/>
                     </connections>
@@ -185,7 +215,7 @@
             <point key="canvasLocation" x="671" y="-240"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Loading.png" width="1024" height="1024"/>
-    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="9nb-56-lmK"/>
+    </inferredMetricsTieBreakers>
 </document>
