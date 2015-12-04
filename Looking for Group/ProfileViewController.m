@@ -187,6 +187,15 @@
         
     }
     
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"returnFromProfile"])
+    {
+        ViewController * viewController = [segue destinationViewController];
+        viewController.userID = self.userID;
+    }
     
 }
 
